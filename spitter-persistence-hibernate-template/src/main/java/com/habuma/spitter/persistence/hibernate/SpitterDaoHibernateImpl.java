@@ -40,6 +40,7 @@ public class SpitterDaoHibernateImpl extends AbstractDaoHibernateImpl<Spitter> i
     }
 
     @Override
+    @SuppressWarnings({"unchecked"})
     public List<Spitter> getAll() {
         return currentSession().createQuery("from Spitter").list();
     }
