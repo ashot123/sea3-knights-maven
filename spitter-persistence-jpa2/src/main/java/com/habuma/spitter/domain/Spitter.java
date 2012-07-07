@@ -9,7 +9,6 @@ import java.util.Date;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static javax.persistence.GenerationType.AUTO;
 import static org.apache.commons.lang.builder.EqualsBuilder.reflectionEquals;
 import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode;
 import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
@@ -36,7 +35,8 @@ public class Spitter implements Persistent {
     private boolean updateByEmail;
 
     @Id
-    @GeneratedValue(strategy = AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "spitterIdSequence")
+    @SequenceGenerator(name = "spitterIdSequence", sequenceName = "spitter_id_seq", allocationSize = 1)
     public Long getId() {
         return id;
     }

@@ -7,7 +7,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
-import static javax.persistence.GenerationType.AUTO;
 import static org.apache.commons.lang.builder.EqualsBuilder.reflectionEquals;
 import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode;
 import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
@@ -29,7 +28,8 @@ public class Spittle implements Persistent {
     }
 
     @Id
-    @GeneratedValue(strategy = AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "spittleIdSequence")
+    @SequenceGenerator(name = "spittleIdSequence", sequenceName = "spittle_id_seq", allocationSize = 1)
     public Long getId() {
         return this.id;
     }

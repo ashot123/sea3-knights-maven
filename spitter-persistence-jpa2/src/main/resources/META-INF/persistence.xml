@@ -7,7 +7,7 @@
         <class>com.habuma.spitter.domain.Spitter</class>
         <class>com.habuma.spitter.domain.Spittle</class>
         <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenSevenDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
             <!--<property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
         </properties>
     </persistence-unit>

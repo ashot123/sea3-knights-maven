@@ -31,19 +31,20 @@ public class MainJpa {
         //Spitter spitter = spitterDao.getSpitterByUsername("artnames");
         //System.out.print(spitter);
 
-       /* Spitter spitter = new Spitter();
-        spitter.setFullName("Hovik Petrosyan");
+       Spitter spitter = new Spitter();
+        spitter.setFullName("Hovik Sargsyan");
         spitter.setUsername("hovik1");
         spitter.setPassword("hovik1");
         spitter.setEmail("hovik@pisem.net");
         spitter.setUpdateByEmail(true);
 
         spitterDao.addSpitter(spitter);
-        */
 
-        Spitter spitter = spitterDao.get(3L);
-        //spitterDao.delete(8L);
-        System.out.print(spitter);
+
+        //Spitter spitter = spitterDao.get(150L);
+        //System.out.print(spitter);
+        //spitterDao.delete(200L);
+
 
 
 
