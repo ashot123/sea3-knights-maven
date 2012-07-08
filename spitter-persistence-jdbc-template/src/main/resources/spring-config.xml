@@ -8,14 +8,14 @@
                            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
     <context:annotation-config/>
-    <context:component-scan base-package="com.habuma.com.habuma.spitter.persistence"/>
+    <context:component-scan base-package="com.habuma.com.habuma.spitter.com.habuma.spitter.persistence"/>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg ref="dataSource"/>
     </bean>
 
     <!--<bean id="spitterDao"
-          class="com.habuma.com.habuma.spitter.persistence.JdbcSpitterDao">
+          class="com.habuma.com.habuma.spitter.com.habuma.spitter.persistence.JdbcSpitterDao">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 -->

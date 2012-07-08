@@ -23,8 +23,8 @@
     </bean>
 
 
-    <!--  <bean id="emf"
-     class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+    <!--
+    <bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="spitterPU" />
     </bean>  -->
 
@@ -44,7 +44,7 @@
     </bean>
 
     <!-- 3-show the dao class  -->
-    <context:component-scan base-package="com.habuma.spitter.persistence.jpa"/>
+    <context:component-scan base-package="com.habuma.spitter.com.habuma.spitter.persistence.jpa"/>
 
     <tx:annotation-driven/>
 </beans>

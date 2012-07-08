@@ -38,10 +38,11 @@
         <module>springidol-autowired</module>
         <module>springidol-annotation</module>
         <module>springidol-atinject</module>
-        <module>spitter-persistence-jdbc-conventional</module>
-        <module>spitter-persistence-jdbc-template</module>
-        <module>spitter-persistence-hibernate-template</module>
-        <module>spitter-persistence-jpa2</module>
+        <module>spitter-com.habuma.spitter.persistence-jdbc-conventional</module>
+        <module>spitter-com.habuma.spitter.persistence-jdbc-template</module>
+        <module>spitter-com.habuma.spitter.persistence-hibernate-template</module>
+        <module>spitter-com.habuma.spitter.persistence-jpa2</module>
+        <module>spitter-com.habuma.spitter.service-programmatic-tx</module>
     </modules>
 
     <repositories>

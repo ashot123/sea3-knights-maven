@@ -1,14 +1,14 @@
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+<com.habuma.spitter.persistence xmlns="http://java.sun.com/xml/ns/com.habuma.spitter.persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/com.habuma.spitter.persistence http://java.sun.com/xml/ns/com.habuma.spitter.persistence/persistence_1_0.xsd"
              version="1.0">
 
-    <persistence-unit name="spitterPU" transaction-type="RESOURCE_LOCAL">
-        <class>com.habuma.spitter.domain.Spitter</class>
-        <class>com.habuma.spitter.domain.Spittle</class>
+    <com.habuma.spitter.persistence-unit name="spitterPU" transaction-type="RESOURCE_LOCAL">
+        <class>com.habuma.spitter.com.habuma.spitter.domain.Spitter</class>
+        <class>com.habuma.spitter.com.habuma.spitter.domain.Spittle</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
             <!--<property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
         </properties>
-    </persistence-unit>
-</persistence>
+    </com.habuma.spitter.persistence-unit>
+</com.habuma.spitter.persistence>

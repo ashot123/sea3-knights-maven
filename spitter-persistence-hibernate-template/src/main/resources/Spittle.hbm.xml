@@ -4,13 +4,13 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.habuma.com.habuma.spitter.domain.Spittle" table="SPITTLE">
+    <class name="com.habuma.com.habuma.spitter.com.habuma.spitter.domain.Spittle" table="SPITTLE">
         <id column="id" name="id" type="java.lang.Long">
             <generator class="native"/>
         </id>
         <property name="text" column="SPITTLETEXT" type="java.lang.String"/>
         <property name="when" column="POSTEDTIME" type="java.util.Date"/>
 
-        <many-to-one name="spitter" class="com.habuma.com.habuma.spitter.domain.Spitter" column="SPITTER_ID"/>
+        <many-to-one name="spitter" class="com.habuma.com.habuma.spitter.com.habuma.spitter.domain.Spitter" column="SPITTER_ID"/>
     </class>
 </hibernate-mapping>
