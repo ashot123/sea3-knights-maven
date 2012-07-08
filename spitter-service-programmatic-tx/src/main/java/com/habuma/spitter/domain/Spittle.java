@@ -14,75 +14,75 @@ import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode
 import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
 
 @Entity
-@Table(name="spittle")
+@Table(name = "spittle")
 public class Spittle implements Serializable {
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-  private Long id;
-  private Spitter spitter;
-  private String text;
-  
-  @DateTimeFormat(pattern="hh:mma MMM d, YYYY")
-  private Date when;
+    private Long id;
+    private Spitter spitter;
+    private String text;
 
-  public Spittle() {
-    this.spitter = new Spitter();  // HARD-CODED FOR NOW
-    this.spitter.setId((long)1);
-  }
-  
-  @Id
-  @GeneratedValue(strategy = AUTO)
-  public Long getId() {
-    return this.id;
-  }
-  
-  public void setId(Long id) {
-    this.id = id;
-  }
-  
-  @Column(name="spittleText")
-  @NotNull
-  @Size(min=1, max=140)
-  public String getText() {
-    return this.text;
-  }
-  
-  public void setText(String text) {
-    this.text = text;
-  }
-  
-  @Column(name="postedTime")
-  public Date getWhen() {
-    return this.when;
-  }
+    @DateTimeFormat(pattern = "hh:mma MMM d, YYYY")
+    private Date when;
 
-  public void setWhen(Date when) {
-    this.when = when;
-  }
+    public Spittle() {
+        this.spitter = new Spitter();  // HARD-CODED FOR NOW
+        this.spitter.setId((long) 1);
+    }
 
-  @ManyToOne
-  @JoinColumn(name="spitter_id")
-  public Spitter getSpitter() {
-    return this.spitter;
-  }
+    @Id
+    @GeneratedValue(strategy = AUTO)
+    public Long getId() {
+        return this.id;
+    }
 
-  public void setSpitter(Spitter spitter) {
-    this.spitter = spitter;
-  }
-  
-  // plumbing
-  @Override
-  public boolean equals(Object obj) {
-    return reflectionEquals(this, obj);
-  }
-  
-  @Override
-  public int hashCode() {
-    return reflectionHashCode(this);
-  }
-  
-  @Override
-  public String toString() {
-    return reflectionToString(this);
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Column(name = "spittleText")
+    @NotNull
+    @Size(min = 1, max = 140)
+    public String getText() {
+        return this.text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    @Column(name = "postedTime")
+    public Date getWhen() {
+        return this.when;
+    }
+
+    public void setWhen(Date when) {
+        this.when = when;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "spitter_id")
+    public Spitter getSpitter() {
+        return this.spitter;
+    }
+
+    public void setSpitter(Spitter spitter) {
+        this.spitter = spitter;
+    }
+
+    // plumbing
+    @Override
+    public boolean equals(Object obj) {
+        return reflectionEquals(this, obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return reflectionHashCode(this);
+    }
+
+    @Override
+    public String toString() {
+        return reflectionToString(this);
+    }
 }
